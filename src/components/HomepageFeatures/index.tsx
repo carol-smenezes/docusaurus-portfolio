@@ -5,52 +5,63 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  badge: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Product Management',
+    badge: 'Estratégia & Escopo',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Definição de visão de produto SaaS B2B, mapeamento de processos complexos, 
+        priorização de backlog e garantia de que o projeto saia da folha em branco 
+        com escopo gerenciável e foco em entrega de valor.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'UX Writing',
+    badge: 'Experiência & Tom de Voz',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Desenho de fluxos conversacionais, microcopy focado em acessibilidade e 
+        mensagens claras para o usuário. Tradução de jargões técnicos complexos em 
+        interfaces amigáveis e intuitivas.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Technical Writing',
+    badge: 'Arquitetura de Informação',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Estruturação de documentação robusta utilizando Markdown e ferramentas Docs-as-Code. 
+        Criação de guias de instalação, documentação de processos e manuais focados na legibilidade.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, badge, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+      <div className="padding-horiz--md margin-bottom--xl">
+        <div style={{
+          display: 'inline-block',
+          padding: '4px 12px',
+          borderRadius: '16px',
+          fontSize: '0.85rem',
+          fontWeight: '600',
+          marginBottom: '12px',
+          backgroundColor: 'var(--ifm-color-primary-lightest)',
+          color: 'var(--ifm-background-surface-color)'
+        }}>
+          {badge}
+        </div>
+        <Heading as="h3" className="margin-bottom--sm">{title}</Heading>
+        <p style={{lineHeight: '1.6', fontSize: '0.95rem'}}>{description}</p>
       </div>
     </div>
   );
@@ -58,8 +69,15 @@ function Feature({title, Svg, description}: FeatureItem) {
 
 export default function HomepageFeatures(): ReactNode {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} style={{padding: '4rem 0', backgroundColor: 'var(--ifm-background-surface-color)'}}>
       <div className="container">
+        <div className="text--center margin-bottom--xl">
+          <Heading as="h2">Como atuei no desenvolvimento do Alcária OS</Heading>
+          <p style={{maxWidth: '600px', margin: '0 auto', color: 'var(--ifm-font-color-base)', opacity: 0.8}}>
+            Um ecossistema complexo exige um olhar multidisciplinar. Veja abaixo as disciplinas que 
+            arquitetaram a experiência do produto.
+          </p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
