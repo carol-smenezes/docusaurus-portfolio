@@ -11,11 +11,11 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://your-portfolio.com', // Update when deploying
-  baseUrl: '/',
+  url: 'https://carol-smenezes.github.io',
+  baseUrl: '/docusaurus-portfolio/',
 
-  organizationName: 'carolinasacramento', 
-  projectName: 'portfolio', 
+  organizationName: 'carol-smenezes', 
+  projectName: 'docusaurus-portfolio', 
 
   onBrokenLinks: 'throw',
 
