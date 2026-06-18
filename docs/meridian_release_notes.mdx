@@ -1,0 +1,99 @@
+---
+sidebar_position: 2
+---
+
+# Release Notes
+
+We're delivering this automatic upgrade on February 6, 2026.
+
+## New annotation options in the Markup tool
+
+MPS-25696
+
+The **Markup** tool now offers new options to enhance your annotation flexibility:
+
+- Orange, purple, black, and white colors.
+- A wider stroke width selector.
+- Stroke width number inputs ranging from 1 to 100 pixels.
+
+## Track document revision changes
+
+MPS-55644
+
+The audit log now registers changes to a document's revision number.
+
+## Configure renditions settings
+
+MPS-56148
+
+Meridian Portal now renders uploaded documents based on the rendition settings you define in **Account Settings** > **Document Types** > **Default Values** > **Rendition Information**. The **Rendition Information** properties let you configure how each document type displays. You can define the following settings:
+- Sheet size
+- Sheet orientation
+- Sheet layout
+- Render color
+- Pen settings
+
+## Site cache connection
+
+MPS-54901, MPS-54777, MPS-56128, MPS-49646
+
+The site cache log now notifies you when the connection is lost and automatically attempts to reconnect. If the system fails to restore the connection after the configured number of retries, it displays a dialog that allows you to reconnect manually. The site cache also reconnects automatically when you restart the site cache server.
+
+## Portal Reporting API
+
+MPS-57404
+
+You can now retrieve project, package, project documents, and package documents metadata with the **Portal Reporting** API. You can also filter based on the modified date. This provides project insights into deliverables, progress, and contractor performance.
+
+## Favorites ribbon
+
+MPS-59385
+
+Quickly access your most-used sections with the new Favorites ribbon. Click the star icon in each section you want to include in the Favorites ribbon.
+
+## AutoCAD family 2025 support
+
+MPS-55021, MPS-55020, MPS-55026, MPS-55017
+
+Meridian now integrates with AutoCAD 2025, and AutoCAD based applications such as Electrical, Map 3D, Civil 3D, and RealDWG 2025.
+
+## Asset map for GIS integration with Esri ArcGIS
+
+ACR-308
+
+Link Maintenance Connection assets to Esri ArcGIS to manage assets, work orders, and maintenance workflows in an interactive map.
+
+After your system administrator configures the Esri integration, you can view assets and work orders in the **Asset map**. Use the map to visualize locations, understand asset relationships, and access related records.
+
+## Session manager in app chooser list
+
+MC-23658
+
+You can now access the **Session manager** directly from the app chooser list when you sign in to Maintenance Connection. It displays under **Additional options**, making it faster to open and manage your active sessions.
+
+## Maintenance Connection Tutorials
+
+MC-23389
+
+Access **Maintenance Connection Tutorials** from the **Help** menu to learn the system through practical, guided steps.
+
+## Saved Searches
+
+MC-17287, MC-22070
+
+Save and reuse your preferred search filters directly in the grid view of the Work Order module. Saved searches help you access and organize data more efficiently, reduce time spent reapplying filters, and maintain consistent views when tracking work orders. 
+With sharing permissions, you can also create and share the searches with multiple access groups.
+
+## Crue: your AI assistant
+
+MC-23207
+
+Use Crue to get quick answers to your questions, summarized user guides, and links to additional content. Click **Ask Crue** in the upper-right corner.
+
+## Improvements and issues fixed
+| Summary | Reference #    |
+|--------|------------|
+| We updated the PDFTron viewer, which now supports viewing form fields. | MPS-56207 |
+| Text search is no longer available in the viewer when comparing documents or revisions. | MPS-63116 |
+| We improved the performance of the MicroStation application link. You can now open drawings with many references more quickly. | MPS-56767 |
+| The **Connect to PowerWeb** button now works as expected when you open a document in Application Integration. | MPS-58382 |

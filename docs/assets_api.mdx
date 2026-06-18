@@ -1,0 +1,99 @@
+---
+sidebar_position: 6
+---
+
+# Assets API
+
+The Assets API is a RESTful service that retrieves asset metadata and creates or updates assets in the system. It enables integration with external business systems such as Computerized Maintenance Management Systems (CMMS), Geospatial Information Systems (GIS), and Facility Management (FM) platforms.
+
+---
+
+
+## Base Endpoint
+
+```
+/api/assets
+```
+
+---
+
+## Endpoints
+
+| Method | Endpoint             | Description                     |
+| ------ | -------------------- | ------------------------------- |
+| GET    | `/assets`            | Retrieve a list of assets       |
+| GET    | `/assets/{globalId}` | Retrieve a specific asset by ID |
+| PUT    | `/assets/{globalId}` | Create or update an asset       |
+
+---
+
+## Path Parameters
+
+| Name     | Type   | Required | Description                    |
+| -------- | ------ | -------- | ------------------------------ |
+| globalId | string | Yes      | Unique identifier of the asset |
+
+---
+
+## Headers
+
+| Header       | Required | Value              |
+| ------------ | -------- | ------------------ |
+| Content-Type | Yes      | `application/json` |
+
+---
+
+## Request Body
+
+### Attributes
+
+| Name               | Type   | Required | Description                                        |
+| ------------------ | ------ | -------- | -------------------------------------------------- |
+| tagName            | string | Yes      | Asset name or number                               |
+| tagType            | string | Yes      | Asset type (`Equipment`, `Work-Order`, `Location`) |
+| functionalLocation | string | No       | Asset location                                     |
+
+### Example
+
+```json
+{
+  "tagName": "PUMP-001",
+  "tagType": "Equipment",
+  "functionalLocation": "Plant-01"
+}
+```
+
+---
+
+## Responses
+
+### 200 OK
+
+The request completed successfully and returned the expected result.
+
+### 400 Bad Request
+
+The request failed. Ensure that all required parameters, headers, and attributes are included and valid.
+
+---
+
+## Example Request
+
+```http
+PUT /api/assets/12345
+Content-Type: application/json
+
+{
+  "tagName": "PUMP-001",
+  "tagType": "Equipment",
+  "functionalLocation": "Plant-01"
+}
+```
+
+---
+
+## Notes
+
+* Ensure that `globalId` is unique when creating new assets.
+* Use consistent `tagType` values to avoid validation errors.
+* All requests must include the `Content-Type: application/json` header.

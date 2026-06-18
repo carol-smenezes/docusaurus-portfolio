@@ -1,0 +1,84 @@
+---
+sidebar_position: 5
+sidebar_label: Pin Photos in Mobile
+---
+
+# Pin Photos in Mobile
+
+Pin photos directly to drawing artefacts for ongoing use using the mobile app for Android and iOS. You can pin photos to a drawing as visual supporting information regardless of its workflow state or version, similar to adding a comment. For example, field technicians can pin photos to provide real-world context, making artefacts easier to understand.
+
+Meridian stores pinned photos as linked artefacts in the database and also displays them in Meridian Power. Control photo visibility to switch between technical schematic details and contextual information.
+
+If you are a group user, advanced group user, or group admin, the system adds media artefacts only to the groups that you belong to.
+
+You can only pin photos to drawing type artefacts. Document and media type artefacts are not supported. Meridian uploads all pinned photos as media type artefacts by default. The type of the pinned photo artefact is not editable.
+
+If the image you want to pin requires markup or a review process, use the **Markup Photo** feature in the **Markup** tool instead.
+
+## Prerequisites
+
+- To pin photos, you need permission to upload new artefacts to the bucket as configured in the **Restrict Upload** settings.
+    
+    Contact your bucket administrator for more information.
+    
+- To delete pinned photos, you must be a bucket administrator or a group administrator for artefacts in the groups you manage.
+
+## Pin a photo
+
+You can pin multiple photos to a single pin and view them as a library, or you can create multiple pins throughout the drawing.
+
+1. Open a drawing artefact in the Meridian mobile app.
+2. Tap the expand menu button and select **Pin a Photo**.
+    
+    The first time you use the app, allow access to your phone’s photo gallery and camera.
+    
+3. Take a new photo or upload one from your camera roll.
+4. On the drawing, select where to pin the photo.
+5. To add more photos:
+    - Tap **Add** to add more photos to the same pin.
+    - Tap **Close**, then tap **Pin a Photo** to add a new pin in a different location.
+6. To edit the pin:
+    - Move the pin icon anywhere on the drawing.
+    - Resize the pin icon.
+    - Tap the trash icon to delete the pin.
+7. When you finish adding and editing pins, tap **Submit**.
+8. Tap **Edit**, then select a group to store your images together.
+9. Optionally, add comments to support your pin.
+10. Tap **Submit**.
+
+## View pinned photos
+
+View pinned photos after submitting them on both mobile and web apps. You can also show or hide pinned photos to avoid obstructing areas of the drawing.
+
+### View pins on mobile
+
+1. Open a drawing artefact in the Meridian mobile app.
+2. Tap the camera icon to view pinned photos.
+3. To configure pin visibility, tap the expand menu button:
+    - Select **Show Photos** if the photos are hidden.
+    - Select **Hide Photos** to remove the camera icon from the drawing preview.
+
+### View pins on the web
+
+1. Open a drawing artefact with pinned images.
+    
+    The pins display by default on the drawing preview.
+    
+2. Click a pin to expand the image and view all photos of the same pin.
+3. To configure the pin's visibility, click the floating menu button in the drawing preview pane:
+    - Select **Pinned Photos** to view the pins.
+    - Clear **Pinned Photos** to hide the pins.
+
+## Delete pinned photos
+
+To remove pinned photos from your drawings, delete the linked media artefact. This removes the photo and the pin no longer displays in the drawing. You can only delete linked artefacts in Meridian Power.
+
+1. Open a drawing artefact with pinned images.
+2. Click the **Linked** tab.
+3. Click the photo you want to delete to preview it.
+4. Click the **Tools** tab and expand **Toolkit**.
+5. Click **Delete Artefact**.
+6. Select a requester and reason for deletion.
+7. Click **Submit**.
+
+If the **Delete with State** setting is enabled for your bucket, you can restore deleted pinned photos in the **Deleted Register** until your bucket administrator purges them. This brings the pinned photo back to the drawing preview and the artefact reappears in the **Linked** tab. For more information about the bucket settings, contact your bucket administrator.

@@ -1,0 +1,48 @@
+---
+sidebar_position: 5
+---
+
+# Configure Esri ArcGIS Integration
+
+Configure the ArcGIS integration to connect your Maintenance Connection assets and work orders directly to Esri’s mapping platform.
+
+## Prerequisites
+
+* Your organization must have an Esri ArcGIS license (ArcGIS Online or ArcGIS Enterprise 11.4+). 
+* Your organization account must have the **Creator** user type or higher.
+
+## Configure ArcGIS
+
+1. Open **Esri ArcGIS**.
+2. Go to **Content > My content**.
+3. Create a web map.
+
+   * The layers you configure in the web map display in Maintenance Connection.
+   * You can find the **GIS Map ID** in the URL after saving the map.
+4. Make the map and layers accessible to the API key:
+
+   * **Public map**: In *Share Map*, select **Everyone (public)**.
+   * **Private map**: Grant item access via the API key credential.
+5. Create an API key and configure:
+
+   * **Item access**:
+
+     * Public map: Select **No item access**.
+     * Private map: Select **Grant access to specific items** and choose the web map and layers.
+   * **Privileges**: Select required location services (for example, basemaps, geocoding/search).
+   * **Expiration**: Set an expiration date. The integration stops when the key expires.
+6. Copy the API key immediately.
+
+   * This is the only time the full key is visible.
+7. Contact Accruent Support and provide:
+
+   * **GIS Map ID**
+   * **GIS API Key**
+   * **GIS Portal URL**
+   * **OAuth Client ID** (if using OAuth)
+   * **OAuth Client Secret** (if using OAuth)
+
+---
+
+> **Note**: This page is publicly available on the [Accruent Customer Center](https://customercenter.accruent.com/p/maintenance-connection-user-guides?doc=https%3A%2F%2Fhelp.accruent.com%2Fmc%2FContent%2FMCUserGuide%2FAdditional%2520Features%2Fgis_integration%2Fconfigure_esri_integration.htm%3Ftocpath%3DAdditional%2520Features%257CEsri%2520ArcGIS%2520Integration%257C_____2).
+Last access: June 17, 2026

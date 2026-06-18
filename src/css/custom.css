@@ -70,6 +70,7 @@ h1, h2, h3, h4 {
   transition: var(--g-transition);
 }
 
+
 /* Customização dos itens da sidebar */
 .menu__link {
   font-weight: 500;
@@ -145,3 +146,4 @@ th {
   color: #FFFFFF !important;
   text-decoration: underline;
 }
+

@@ -63,9 +63,9 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar', 
           position: 'left',
-          label: 'Case Studies',
+          label: 'Technical Documentation',
         },
-        {to: '/blog', label: 'Articles & Insights', position: 'left'},
+        {to: '/blog', label: 'UX Writing Projects', position: 'left'},
         {
           href: 'https://github.com/carol-smenezes',
           label: 'GitHub',
@@ -85,11 +85,11 @@ const config: Config = {
           title: 'Navigation',
           items: [
             {
-              label: 'Case Studies',
+              label: 'Technical Documentation',
               to: '/portfolio/intro',
             },
             {
-              label: 'Articles',
+              label: 'UX Writing',
               to: '/blog',
             },
           ],
